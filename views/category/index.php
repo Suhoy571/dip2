@@ -85,7 +85,7 @@
 
     as $hit):
     $i++; ?>
-    <?php if ($i > 2): ?>
+    <?php if ($i % 3 == 0): ?>
     <div class="col-md-4 chain-grid grid-top-chain">
         <? else: ?>
         <div class="col-md-4 chain-grid">
@@ -112,7 +112,6 @@
     </div>
     <div class="products">
         <h5 class="latest-product">LATEST PRODUCTS</h5>
-        <a class="view-all" href="product.html">VIEW ALL<span> </span></a>
     </div>
     <div class="product-left">
         <?php if (!empty($new)): ?>
@@ -121,7 +120,7 @@
 
         as $newPr):
         $i++; ?>
-        <?php if ($i > 2): ?>
+        <?php if ($i % 3 == 0): ?>
         <div class="col-md-4 chain-grid grid-top-chain">
             <? else: ?>
             <div class="col-md-4 chain-grid">
@@ -190,4 +189,4 @@
     <div class="clearfix"></div>
 </div>
 
-<?php  ?>
+<?php ?>

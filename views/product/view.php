@@ -5,14 +5,18 @@
     <div class=" single_top">
         <div class="single_grid">
             <div class="grid images_3_of_2">
-                <ul id="etalage" class="etalage" style="display: block; width: 302px; height: 535px;">
-                    <li class="etalage_thumb thumb_1" style="display: none; background-image: none; opacity: 0;">
-                        <a href="optionallink.html">
-                            <?= \yii\helpers\Html::img("@web/images/{$product->img}", ['class' => 'etalage_thumb_image',
-                                'style' => "display: inline; width: 300px; height: 400px; opacity: 1;"]) ?>
-                        </a>
-                    </li>
-                </ul>
+                <!--                <ul id="etalage" class="etalage" style="display: block; width: 302px; height: 535px;">-->
+                <!--                    <li class="etalage_thumb thumb_1" style="display: none; background-image: none; opacity: 0;">-->
+                <!--                        <a href="optionallink.html">-->
+                <!--                            --><? //= \yii\helpers\Html::img("@web/images/{$product->img}", ['class' => 'etalage_thumb_image',
+                //                                'style' => "display: inline; width: 300px; height: 400px; opacity: 1;"]) ?>
+                <!--                        </a>-->
+                <!--                    </li>-->
+                <!--                </ul>-->
+                <a href="optionallink.html">
+                    <?= \yii\helpers\Html::img("@web/images/{$product->img}", ['class' => 'etalage_thumb_image',
+                        'style' => "display: inline; width: 300px; height: 400px; opacity: 1;"]) ?>
+                </a>
                 <div class="clearfix"></div>
             </div>
             <div class="desc1 span_3_of_2">

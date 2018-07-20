@@ -13,6 +13,7 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'layout' => 'admin',
+            'defaultRoute' => 'default/index',
         ],
     ],
     'aliases' => [
@@ -31,7 +32,6 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-            ////////////////////////////////////////////////////'loginUrl' => ''
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -48,20 +48,6 @@ $config = [
                 'encryption' => 'ssl',
             ],
         ],
-        // ...
-//        'mailer' => [
-//            'class' => 'yii\swiftmailer\Mailer',
-//            'viewPath' => '@app/mailer',
-//            'useFileTransport' => false,
-//            'transport' => [
-//                'class' => 'Swift_SmtpTransport',
-//                'host' => 'smtp.mailtrap.io',
-//                'username' => 'f4140cb359699c',
-//                'password' => '5bad32993d81bb',
-//                'port' => '2525',
-//                'encryption' => 'tls',
-//            ],
-//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

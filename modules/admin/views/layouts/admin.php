@@ -44,7 +44,7 @@ ltAppAsset::register($this);
                 </ul>
                 <ul class="support">
                     <li class="van"><a href="#"><label> </label></a></li>
-                    <li><a href="#">Free shipping <span class="live">on order over 500</span></a></li>
+                    <li><a href="#">Free shipping <span class="live">on order over $500</span></a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -108,9 +108,9 @@ ltAppAsset::register($this);
     </div>
 </div>
 <!---->
-
-<?= $content ?>
-
+<div class="container">
+    <?= $content ?>
+</div>
 <!---->
 <div class="footer">
     <div class="footer-top">
