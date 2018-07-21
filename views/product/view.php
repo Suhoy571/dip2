@@ -13,7 +13,7 @@
                 <!--                        </a>-->
                 <!--                    </li>-->
                 <!--                </ul>-->
-                <a href="optionallink.html">
+                <a>
                     <?= \yii\helpers\Html::img("@web/images/{$product->img}", ['class' => 'etalage_thumb_image',
                         'style' => "display: inline; width: 300px; height: 400px; opacity: 1;"]) ?>
                 </a>

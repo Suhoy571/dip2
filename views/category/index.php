@@ -153,7 +153,9 @@
             <h3 class="cate">CATEGORIES</h3>
             <ul class="menu">
                 <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
-                <li class="kid-menu"><a href="<?= \yii\helpers\Url::to(['site/contact']) ?>">Contact us</a></li>
+                <li class="kid-menu">
+                    <a href="<?= \yii\helpers\Url::to(['site/contact']) ?>">Contact us</a>
+                </li>
             </ul>
         </div>
         <!--initiate accordion-->
@@ -177,14 +179,13 @@
             });
         </script>
         <div class=" chain-grid menu-chain">
-            <a href="single.html"><img class="img-responsive chain" src="/images/wat.jpg" alt=" "/></a>
+            <a href="#"><img class="img-responsive chain" src="/images/wat.jpg" alt=" "/></a>
             <div class="grid-chain-bottom chain-watch">
                 <span class="actual dolor-left-grid">300$</span>
                 <span class="reducedfrom">500$</span>
                 <h6><a href="single.html">Lorem ipsum dolor</a></h6>
             </div>
         </div>
-        <a class="view-all all-product" href="product.html">VIEW ALL PRODUCTS<span> </span></a>
     </div>
     <div class="clearfix"></div>
 </div>

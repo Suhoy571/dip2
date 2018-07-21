@@ -937,7 +937,7 @@ p.m_text {
     padding: 10px;
     border: 1px solid #ddd;
     outline: none;
-    margin: 1.5em 0;
+    /*margin: 1.5em 0;*/
     font-size: 1em;
     color: #999;
 }
@@ -948,7 +948,7 @@ p.m_text {
     padding: 10px;
     border: 1px solid #ddd;
     outline: none;
-    margin: 1.5em 0;
+    /*margin: 1.5em 0;*/
     font-size: 1em;
     color: #999;
     height: 300px;
