@@ -117,7 +117,7 @@ ltAppAsset::register($this);
         <div class="container">
             <ul class="nav navbar-nav collapse navbar-collapse">
                 <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">Home/Заказы</a></li>
-                <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">Home/Товары</a></li>
+                <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">AlmarYacht</a></li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                         aria-expanded="false">Категории</a>
                     <ul role="menu" class="dropdown-menu">
