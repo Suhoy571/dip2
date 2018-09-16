@@ -8,9 +8,9 @@ function showCart(cart) {
 $('#cart .modal-body').on('click', '.del-item', function () {
     var id = $(this).data('id');
     console.log(id);
-    $.ajax({
-        url: '/cart/del-item',
-        data: {id: id},
+    $.ajax({ // Формирования Ajax запроса
+        url: '/cart/del-item', //Куда ведет URL
+        data: {id: id}, //
         type: 'GET',
         success: function (res) {
             if (!res) alert('Ошибка!');
@@ -55,15 +55,16 @@ $('.now-get').on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('id'),
         qty = $('#qty').val();
-    $.ajax({
-        url: '/cart/add',
-        data: {id: id, qty: qty},
-        type: 'GET',
-        success: function (res) {
-            if (!res) alert('Ошибка!');
+    $.ajax({ // Формирования Ajax запроса
+        url: '/cart/add', //Куда ведет URL
+        data: {id: id, qty: qty}, //Данные, которые передаем
+        type: 'GET', //Метод передачи данных на сервер
+        success: function (res) { // В случае успеха
+            if (!res)  //Если пустая строка
+                alert('Ошибка!');
             showCart(res);
         },
-        error: function () {
+        error: function () { //В случаее ошибки
             alert('Error!');
         }
     });

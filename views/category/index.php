@@ -131,7 +131,7 @@
                 <span class="star"> </span>
                 <div class="grid-chain-bottom">
                     <h6><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $newPr->id]) ?>"><a
-                                    href="single.html"><?= $newPr->name ?></a></h6>
+                                    href="<?= \yii\helpers\Url::to(['product/view', 'id' => $newPr->id]) ?>"><?= $newPr->name ?></a></h6>
                     <div class="star-price">
                         <div class="dolor-grid">
                             <span class="actual">$<?= $newPr->price ?></span>

@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class=" login-right">
             <h3>REGISTERED CUSTOMERS</h3>
             <p>If you have an account with us, please log in.</p>
+            <p><span style="color: red; font-size: 25px">USERNAME: admin, PASSWORD: admin</span></p>
             <?php $form = ActiveForm::begin(); ?>
             <span>Username</span>
             <?= $form->field($model, 'username')->textInput(['autofocus' => true])->textInput(['class' => 'textbox'])->label(false) ?>

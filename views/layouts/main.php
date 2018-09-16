@@ -95,9 +95,13 @@ ltAppAsset::register($this);
                         </a></div>
                 <?php endif; ?>
                 <ul class="login">
-                    <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>"><span> </span>LOGIN</a></li>
-                    |
-                    <li><a href="register.html">SIGNUP</a></li>
+                    <?php if (!Yii::$app->user->isGuest): ?>
+                        <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">To Admin panel</a></li>
+                    <?php else: ?>
+                        <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>"><span> </span>LOGIN</a></li>
+                        |
+                        <li><a href="register.html">SIGNUP</a></li>
+                    <?php endif; ?>
                 </ul>
                 <div class="cart"><a href="#" onclick="return getCart()"><span> </span>CART</a></div>
                 <div class="clearfix"></div>

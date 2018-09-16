@@ -12,10 +12,11 @@ use yii\db\ActiveRecord;
 
 class Cart extends ActiveRecord
 {
-    //qty - количество
     public function addToCart($product, $qty = 1)
     {
+        //Если в корзине есть данный товар
         if (isset($_SESSION['cart'][$product->id])) {
+            //То увеличиваем количество этого товара
             $_SESSION['cart'][$product->id]['qty'] += $qty;
         } else {
             $_SESSION['cart'][$product->id] = [
@@ -25,9 +26,9 @@ class Cart extends ActiveRecord
                 'img' => $product->img
             ];
         }
-        //Если товара нет, то добавляем
+        //Общее количество
         $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] + $qty : $qty;
-        //Если есть то умножаем сумму
+        //Общая сумма
         $_SESSION['cart.sum'] = isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $qty * $product->price : $qty * $product->price;
     }
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrey
- * Date: 14.05.2016
- * Time: 10:37
- */
 
 namespace app\controllers;
 
@@ -43,8 +37,9 @@ class CartController extends AppController
         $id = Yii::$app->request->get('id'); //Получение id товара
         $qty = (int)Yii::$app->request->get('qty'); //Получение id товара
         $qty = !$qty ? 1 : $qty;
-        $product = Product::findOne($id);
-        if (empty($product)) return false;
+        $product = Product::findOne($id); //Получение информации по данному товару
+        if (empty($product))
+            return false;
         $session = Yii::$app->session; //Объект сессии в переменную
         $session->open(); //Открытие сессии
         $cart = new Cart();

@@ -92,13 +92,17 @@ ltAppAsset::register($this);
                 <?php if (!Yii::$app->user->isGuest): ?>
                     <div class="account"><a
                                 href="<?= \yii\helpers\Url::to(['/site/logout']) ?>"><span> </span><?= Yii::$app->user->identity['username'] ?>
-                            (EXIT)
+                            (Exit)
                         </a></div>
                 <?php endif; ?>
                 <ul class="login">
-                    <li><a href="login.html"><span> </span>LOGIN</a></li>
-                    |
-                    <li><a href="register.html">SIGNUP</a></li>
+                    <?php if (!Yii::$app->user->isGuest): ?>
+                        <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">To Admin panel</a></li>
+                    <?php else: ?>
+                        <li><a href="login.html"><span> </span>LOGIN</a></li>
+                        |
+                        <li><a href="register.html">SIGNUP</a></li>
+                    <?php endif; ?>
                 </ul>
                 <div class="cart"><a href="#" onclick="return getCart()"><span> </span>CART</a></div>
                 <div class="clearfix"></div>
@@ -107,11 +111,34 @@ ltAppAsset::register($this);
         </div>
     </div>
 </div>
-<!---->
+
+<div class="header">
+    <div class="bottom-header">
+        <div class="container">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+                <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">Home/Заказы</a></li>
+                <li><a href="<?= \yii\helpers\Url::to(['/admin']) ?>" class="active">Home/Товары</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-expanded="false">Категории</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="<?= \yii\helpers\Url::to(['category/index']) ?>">Список категорий</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to(['category/create']) ?>">Добавить категорию</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-expanded="false">Товары</a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="<?= \yii\helpers\Url::to(['product/index']) ?>">Список товаров</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="container">
     <?= $content ?>
 </div>
-<!---->
+
 <div class="footer">
     <div class="footer-top">
         <div class="container">
