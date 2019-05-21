@@ -42,8 +42,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.mail.ru',
-                'username' => 'uzurpatorov@bk.ru',
-                'password' => 'kirkhammet57',
+                'username' => '///@bk.ru',
+                'password' => '///',
                 'port' => '465',
                 'encryption' => 'ssl',
             ],
